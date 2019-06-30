@@ -1,25 +1,11 @@
-/*
- * Composição: aplica-se a atributos do tipo complexo ou composto, não se aplica a tipos primitivos. No relacionamento do tipo composição, existe uma dependencia, ou seja, arquivo não existe sem o produto.
-(Disciplina compoem Curso)       
 
-No entanto, no relacionamento do tipo agregação, o agregado vive sem o agregador.
-
-O losango é possicionado no lado da classe agregadora. Sempre do lado do losango vai ter a cardinalidade 1.
-
-Geralmente na agregação por composição os objetos agregados são instanciados dentro da classe agregadora,já que
-são, totalmente dependentes.
-
-fonte: https://www.ateomomento.com.br/uml-classes-agregacao/
-
-alto acoplamento: inclusão de atribuições que não sao inerentes
-baixa coesao: mistura de conceitos.
- */
 package br.edu.ifsul.modelo;
 
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -42,7 +28,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 /**
  *
- * @author Telmo Junior
+ * @author evandrouzeda
  */
 
 @Entity
@@ -94,7 +80,7 @@ public class Curso implements Serializable{
         this.disciplina.add(obj);
     }
 
-    public void removerArquivo(int index) {
+    public void removerDisciplina(int index) {
         this.disciplina.remove(index);
     }
     
@@ -126,7 +112,7 @@ public class Curso implements Serializable{
         this.descricao = descricao;
     }
 
-    public Instituicao getInstitucao() {
+    public Instituicao getInstituicao() {
         return instituicao;
     }
 

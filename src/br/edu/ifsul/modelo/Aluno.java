@@ -37,8 +37,6 @@ import org.hibernate.validator.constraints.NotBlank;
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "aluno")
-@DiscriminatorColumn(name = "tipo", discriminatorType =DiscriminatorType.STRING,length = 2)
-@DiscriminatorValue(value = "US")
 @NamedQuery(name="todosAlunoOrdemNome",query="from Aluno order by nome asc")
 
 //definir uma Namequery para fazer a autenticacao do Aluno na aplicacao web

@@ -36,8 +36,8 @@ public class TestePersistirAluno {
     @Test
     public void teste(){
         Aluno obj = new Aluno();
-        obj.setEmail("evandro@gmail.com");
-        obj.setNome("evandro");
+        obj.setEmail("teste@gmail.com");
+        obj.setNome("teste");
         obj.setSenha("123456");
         obj.setDataNascimento(Calendar.getInstance());        
         em.getTransaction().begin();

@@ -22,7 +22,6 @@ import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
 @Table
-@DiscriminatorValue(value = "PF")
 @NamedQueries({
     @NamedQuery(name = "Professor.todosOrderNome", query = "from Professor order by nome")
 })
